@@ -1,0 +1,16 @@
+.ranking-content {
+  align-items: center;
+  background-color: #3a2d88;
+  border-radius: 5px;
+  box-shadow: 2px 5px 20px black;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  font-family: sans-serif;
+  font-size: x-large;
+  justify-content: center;
+  margin: auto;
+  padding: 20px;
+  text-align: center;
+  width: 50%;
+}

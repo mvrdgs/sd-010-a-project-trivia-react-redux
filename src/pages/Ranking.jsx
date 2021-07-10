@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
+import '../styles/ranking.css';
 
 class Ranking extends Component {
   orderMyArray(playerRank) {
@@ -10,7 +11,7 @@ class Ranking extends Component {
     const playerRank = JSON.parse(localStorage.getItem('ranking'));
     this.orderMyArray(playerRank);
     return (
-      <div>
+      <div className="ranking-content">
         <h1 data-testid="ranking-title">Meu Ranking</h1>
         { playerRank.map((player, index) => (
           <p key={ `player-name-${index}` }>
@@ -24,7 +25,13 @@ class Ranking extends Component {
           </p>
         ))}
         <Link to="/">
-          <button type="button" data-testid="btn-go-home">Voltar ao início </button>
+          <button
+            className="play-again-button"
+            type="button"
+            data-testid="btn-go-home"
+          >
+            Voltar ao início
+          </button>
         </Link>
       </div>
     );
